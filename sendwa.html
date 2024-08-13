@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>send</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="contactform">
+    <form action="">
+      <input type="text" id="name" placeholder="enter your name"><br>
+      <input type="text" id="email" placeholder="enter your email"><br>
+      <input type="text" id="product" placeholder="enter your product"><br>
+      <textarea id="message" rows="5" cols="25"></textarea><br>
+      <input type="submit" onclick="whatsapp()" value="Send Enquiry"><br>
+    </form>
+  </div>
+  <script>
+    function whatsapp(){
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var product = document.getElementById("product").value;
+      var message = document.getElementById("message").value;
+      
+      var whatsappurl="https://wa.me/6283824374979?text="
+     + "Name of Customer:" + name +"%0a"
+     + "Email Id:" + email +"%0a"
+     + "Product:" + product +"%0a"
+     + "Message:" + message;
+     
+     window.open(whatsappurl,"_blank").focus();
+    }
+  </script>
+</body>
+</html>
